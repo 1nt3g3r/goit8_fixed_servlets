@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 @WebServlet("/example")
-public class AnnotationServlet extends HttpServlet{
+public class AnnotationServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html; charset=UTF-8;");
