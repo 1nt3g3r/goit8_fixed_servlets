@@ -9,7 +9,7 @@
     <input type="text" name="catName"/>
 
     <br/>
-
+    
     <input type="checkbox" name="catSex"/> <span>Мужчина</span>
 
     <br/>

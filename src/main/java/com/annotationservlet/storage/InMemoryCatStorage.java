@@ -2,18 +2,16 @@ package com.annotationservlet.storage;
 
 import com.annotationservlet.entity.Cat;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class InMemoryCatStorage implements ICatStorage {
     private long catId;
 
-    private Map<Long, Cat> cats = new HashMap<Long, Cat>();
+    private Map<UUID, Cat> cats = new HashMap<UUID, Cat>();
 
     public Cat add(Cat cat) {
-        cat.setId(catId++);
+        UUID uuid = UUID.randomUUID();
+        cat.setId(uuid);
         cats.put(cat.getId(), cat);
         return cat;
     }
@@ -22,7 +20,7 @@ public class InMemoryCatStorage implements ICatStorage {
         cats.remove(cat.getId());
     }
 
-    public Cat get(long catId) {
+    public Cat get(UUID catId) {
         return cats.get(catId);
     }
 

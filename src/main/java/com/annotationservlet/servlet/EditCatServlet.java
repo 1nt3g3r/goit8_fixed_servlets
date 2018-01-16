@@ -17,15 +17,15 @@ public class EditCatServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        long catId = Long.parseLong(req.getParameter("catId"));
-
-        Cat cat = catStorage.get(catId);
-
-        req.setAttribute("catName", cat.getName());
-        req.setAttribute("catSex", cat.getSex() ? "on" : "off");
-        req.setAttribute("catId", cat.getId());
-
-        req.getRequestDispatcher("/jsp/edit-cat.jsp").forward(req, resp);
+//        long catId = Long.parseLong(req.getParameter("catId"));
+//
+//        Cat cat = catStorage.get(catId);
+//
+//        req.setAttribute("catName", cat.getName());
+//        req.setAttribute("catSex", cat.getSex() ? "on" : "off");
+//        req.setAttribute("catId", cat.getId());
+//
+//        req.getRequestDispatcher("/jsp/edit-cat.jsp").forward(req, resp);
     }
 
     @Override
